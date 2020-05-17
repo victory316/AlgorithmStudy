@@ -12,8 +12,22 @@ class BFS {
         val visitedQueue: Queue<Char> = LinkedList()
 
         // Need Visited Queue
-        val needVisitedQueue: Queue<Char> = LinkedList()
+        var needVisitedQueue: Queue<Char>
 
+        for (inputElement in input) {
+            needVisitedQueue = LinkedList()
+
+
+            for (element in inputElement) {
+                needVisitedQueue.add(element)
+            }
+
+            for (element in needVisitedQueue) {
+                if (!visitedQueue.contains(element)) {
+                    visitedQueue.offer(element)
+                }
+            }
+        }
 
         return visitedQueue.toCharArray()
     }

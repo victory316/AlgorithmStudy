@@ -27,5 +27,7 @@ class ExampleUnitTest {
             arrayOf('I', 'C', 'J'),
             arrayOf('J', 'I')
         )
+
+        bfs.doBfs(inputArray)
     }
 }
