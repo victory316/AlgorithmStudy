@@ -10,8 +10,22 @@ import org.junit.Assert.*
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class ExampleUnitTest {
+
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun testBFS() {
+        val bfs = BFS()
+
+        val inputArray: ArrayList<Array<Char>> = arrayListOf(
+            arrayOf('A', 'B', 'C'),
+            arrayOf('B', 'A', 'D'),
+            arrayOf('C', 'A', 'G', 'H', 'I'),
+            arrayOf('D', 'B', 'E', 'F'),
+            arrayOf('E', 'D'),
+            arrayOf('F', 'D'),
+            arrayOf('G', 'C'),
+            arrayOf('H', 'C'),
+            arrayOf('I', 'C', 'J'),
+            arrayOf('J', 'I')
+        )
     }
 }
