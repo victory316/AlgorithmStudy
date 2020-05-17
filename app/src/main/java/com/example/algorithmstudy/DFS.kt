@@ -11,7 +11,6 @@ class DFS {
      */
 
     fun doDFS(input: ArrayList<Array<Char>>): CharArray {
-        val resultChar: ArrayList<Char> = ArrayList()
 
         // Visited Queue
         val visitedQueue: Queue<Char> = LinkedList()
@@ -19,7 +18,7 @@ class DFS {
         // Need Visited Stack
         var needVisitedStack: Stack<Char> = Stack()
 
-        while(visitedQueue.size != input.size) {
+        while (visitedQueue.size != input.size) {
             // 최초 노드 추가
             if (visitedQueue.size == 0) {
                 visitedQueue.offer(input[0][0])
@@ -37,6 +36,7 @@ class DFS {
 
                     // visitedQueue에 없을 경우 visitedQueue에 추가 및 needVisitStack에 관련 노드 추가
                     visitedQueue.add(popElement)
+
                     for (elementList in input) {
                         if (elementList[0] == popElement) {
                             needVisitedStack.addAll(elementList)
