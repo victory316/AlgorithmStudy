@@ -5,3 +5,4 @@
 ### Completed
 
 - BFS
+- DFS
