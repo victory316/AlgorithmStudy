@@ -19,22 +19,23 @@ class DFS {
         // Need Visited Stack
         var needVisitedStack: Stack<Char> = Stack()
 
-        for (inputElement in input) {
-
+        while(visitedQueue.size != input.size) {
             // 최초 노드 추가
             if (visitedQueue.size == 0) {
-                visitedQueue.offer(inputElement[0])
+                visitedQueue.offer(input[0][0])
 
-                for (index in 1 until inputElement.size) {
+                for (index in 1 until input[0].size) {
 
-                    needVisitedStack.add(inputElement[index])
+                    needVisitedStack.add(input[0][index])
                 }
             } else {
 
+                // Visited stack 검사
                 val popElement = needVisitedStack.pop()
 
                 if (!visitedQueue.contains(popElement)) {
-                    // visitedQueue에 없다면
+
+                    // visitedQueue에 없을 경우 visitedQueue에 추가 및 needVisitStack에 관련 노드 추가
                     visitedQueue.add(popElement)
                     for (elementList in input) {
                         if (elementList[0] == popElement) {
@@ -43,18 +44,6 @@ class DFS {
                     }
                 } else {
                     needVisitedStack.pop()
-                }
-
-                println("visited queue")
-                for (element in visitedQueue) {
-                    print("$element ")
-                }
-
-                println()
-
-                println("need visited stack")
-                for (element in needVisitedStack) {
-                    print("$element ")
                 }
 
                 println()
