@@ -2,8 +2,6 @@ package com.example.algorithmstudy
 
 import org.junit.Test
 
-import org.junit.Assert.*
-
 /**
  * Example local unit test, which will execute on the development machine (host).
  *
@@ -54,5 +52,12 @@ class AlgorithmTest {
     @Test
     fun testDivider() {
         SumOfDividers().solution(12)
+    }
+
+    @Test
+    fun CollectionTest() {
+        SumOfDividers().dropMinValue(intArrayOf(4,3,2,1)).forEach {
+            print("$it ")
+        }
     }
 }
