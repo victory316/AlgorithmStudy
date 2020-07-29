@@ -50,4 +50,9 @@ class AlgorithmTest {
 
         dfs.doDFS(inputArray)
     }
+
+    @Test
+    fun testDivider() {
+        SumOfDividers().solution(12)
+    }
 }
