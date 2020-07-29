@@ -60,4 +60,13 @@ class AlgorithmTest {
             print("$it ")
         }
     }
+
+    @Test
+    fun StringTest() {
+        StringUtil().arrangeString("aicndi").forEach {
+            print("$it")
+        }
+
+        println(StringUtil().makeWeirdString("try hello world"))
+    }
 }
