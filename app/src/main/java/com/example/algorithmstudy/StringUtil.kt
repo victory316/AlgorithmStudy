@@ -151,7 +151,7 @@ class StringUtil {
         }
     }
 
-    fun solution(s: String): String {
+    fun smallAndBig(s: String): String {
         val charArray = s.split(' ')
         val answerBuffer = StringBuffer()
         var biggest = -999999999
@@ -170,4 +170,29 @@ class StringUtil {
         answerBuffer.append("$smallest $biggest")
         return answerBuffer.toString()
     }
+
+    // TODO Not yet solved!
+    fun solution(s: String): String {
+        val charArray = s.split(' ')
+        val answerBuffer = StringBuffer()
+
+        charArray.forEach { word ->
+            if (word[0].isLetter()) {
+                word.toLowerCase().apply {
+                    answerBuffer.append(this[0].toUpperCase())
+                }
+
+                answerBuffer.append("${word.toLowerCase().substring(1)} ")
+            } else {
+                answerBuffer.append("${word.toLowerCase()} ")
+            }
+
+        }
+
+        answerBuffer.deleteCharAt(answerBuffer.length - 1)
+
+        return answerBuffer.toString()
+    }
+
+
 }

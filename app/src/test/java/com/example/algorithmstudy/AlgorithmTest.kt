@@ -89,4 +89,13 @@ class AlgorithmTest {
     fun checkSumBetweenNumber() {
         println(StringUtil().sumBetweenNumber(3,15))
     }
+
+    @Test
+    fun checkString() {
+        println(StringUtil().solution("3people unFollowed me"))
+        println(StringUtil().solution("3"))
+        println(StringUtil().solution("1a"))
+        println(StringUtil().solution("a"))
+        println(StringUtil().solution("A kdnkEen 3333FonernE EEoeno"))
+    }
 }
