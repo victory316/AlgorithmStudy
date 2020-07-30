@@ -79,4 +79,14 @@ class AlgorithmTest {
     fun doCesar() {
         println(StringUtil().doCecar("a B z", 4))
     }
+
+    @Test
+    fun checkCollatz() {
+        println(StringUtil().collatz(79999999))
+    }
+
+    @Test
+    fun checkSumBetweenNumber() {
+        println(StringUtil().sumBetweenNumber(3,15))
+    }
 }
