@@ -98,4 +98,10 @@ class AlgorithmTest {
         println(StringUtil().solution("a"))
         println(StringUtil().solution("A kdnkEen 3333FonernE EEoeno"))
     }
+
+    @Test
+    fun truckTest() {
+        println("result : ${StackSolution().solution(2 ,10, intArrayOf(7,4,5,6))}")
+//        println("result : ${StackSolution().solution(100 ,100, intArrayOf(10))}")
+    }
 }
