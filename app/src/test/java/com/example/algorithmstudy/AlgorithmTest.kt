@@ -69,4 +69,14 @@ class AlgorithmTest {
 
         println(StringUtil().makeWeirdString("try hello world"))
     }
+
+    @Test
+    fun checkNumberTest() {
+        println(StringUtil().checkIsDigit("0000000"))
+    }
+
+    @Test
+    fun doCesar() {
+        println(StringUtil().doCecar("a B z", 4))
+    }
 }
