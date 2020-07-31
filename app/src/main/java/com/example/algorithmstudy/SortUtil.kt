@@ -25,31 +25,12 @@ class SortUtil {
         return target
     }
 
-//    fun doInsertionSort(target: ArrayList<Int>): ArrayList<Int> {
-//        val inputLinkedList = LinkedList<Int>()
-//        target.toCollection(inputLinkedList)
-//
-//        var tempInt: Int
-//
-//        for (x in target.indices) {
-//            for (y in x until target.size) {
-//                if (target[x] > target[y]) {
-//                    tempInt = target[y]
-//                    target.add(x, tempInt)
-//                    target.remove(y)
-//                }
-//            }
-//        }
-//
-//        return target
-//    }
     /**
      * https://www.youtube.com/watch?v=g-PGLbMth_g
      */
-
     // 시간복잡도 O(n^2)
     // 공간복잡도 O(n)
-    fun doMyInsertionSort(arr: IntArray): IntArray {
+    fun doInsertionSort(arr: IntArray): IntArray {
         var currentMinimum: Int
         var tempInt: Int
 

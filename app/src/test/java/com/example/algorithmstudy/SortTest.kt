@@ -20,13 +20,13 @@ class SortTest {
     @Test
     fun insertionSortTest() {
 
-        SortUtil().doMyInsertionSort(intArrayOf(2,8,5,3,9,4,1)).forEach {
+        SortUtil().doInsertionSort(intArrayOf(2,8,5,3,9,4,1)).forEach {
             print("[$it]")
         }
 
         println()
 
-        SortUtil().doMyInsertionSort(intArrayOf(9, 4, 3, 104, 1, 2)).forEach {
+        SortUtil().doInsertionSort(intArrayOf(9, 4, 3, 104, 1, 2)).forEach {
             print("[$it]")
         }
     }
