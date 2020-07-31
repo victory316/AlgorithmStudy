@@ -177,14 +177,17 @@ class StringUtil {
         val answerBuffer = StringBuffer()
 
         charArray.forEach { word ->
-            if (word[0].isLetter()) {
-                word.toLowerCase().apply {
-                    answerBuffer.append(this[0].toUpperCase())
-                }
 
-                answerBuffer.append("${word.toLowerCase().substring(1)} ")
-            } else {
-                answerBuffer.append("${word.toLowerCase()} ")
+            if (word.isNotEmpty()) {
+                if (word[0].isLetter()) {
+                    word.toLowerCase().apply {
+                        answerBuffer.append(this[0].toUpperCase())
+                    }
+
+                    answerBuffer.append("${word.toLowerCase().substring(1)} ")
+                } else {
+                    answerBuffer.append("${word.toLowerCase()} ")
+                }
             }
 
         }
@@ -194,5 +197,30 @@ class StringUtil {
         return answerBuffer.toString()
     }
 
+    fun cutAndArrange(target : String, length: Int): String {
+        var remainingString = target
+        val resultBuffer = StringBuffer()
+
+        while (remainingString.isNotBlank()) {
+            if (target.length < length) {
+                return target
+            } else {
+                resultBuffer.append(remainingString.substring(0, length))
+                resultBuffer.append("\n")
+                remainingString = remainingString.substring(length, remainingString.length)
+            }
+
+            println("remain : $remainingString")
+        }
+
+        return resultBuffer.toString()
+    }
+
+    fun testFuction() {
+        val intArray = intArrayOf(7,3,2,9,4)
+        val sortArray = ArrayList<Int>()
+
+        intArray.toCollection(sortArray)
+    }
 
 }

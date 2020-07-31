@@ -33,4 +33,21 @@ class CalculatorUtil {
 
         return answerArray.toLongArray()
     }
+
+    fun divideFibonacci(n: Int): Int {
+        return doFibonacci(n) % 1234567
+    }
+
+    fun doFibonacci(n: Int): Int {
+        return if (n <= 1) {
+            n
+        } else {
+            doFibonacci(n - 2) + doFibonacci(n - 1)
+        }
+    }
+
+    fun solution(numbers: String): Int {
+        var answer = 0
+        return answer
+    }
 }

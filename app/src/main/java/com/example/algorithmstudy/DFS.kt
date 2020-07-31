@@ -24,7 +24,6 @@ class DFS {
                 visitedQueue.offer(input[0][0])
 
                 for (index in 1 until input[0].size) {
-
                     needVisitedStack.add(input[0][index])
                 }
             } else {
@@ -47,7 +46,6 @@ class DFS {
                 }
 
                 println()
-
             }
         }
 
