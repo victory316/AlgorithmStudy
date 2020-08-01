@@ -4,6 +4,8 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import java.util.*
 import kotlin.Comparator
+import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
 
 class Dijkstra {
 
@@ -28,8 +30,7 @@ class Dijkstra {
      */
 
     @RequiresApi(Build.VERSION_CODES.N)
-    fun testDijkstra() {
-
+    fun testMinHeap() {
         val testMinQueue = PriorityQueue<Node>(CustomComparator)
 
         testMinQueue.add(Node(2, 'A'))
@@ -46,13 +47,80 @@ class Dijkstra {
         }
     }
 
-    data class Node(val index: Int, val name: Char)
+    @RequiresApi(Build.VERSION_CODES.N)
+    fun setDijkstraGraph() {
+        val myGraph = HashMap<Char, List<Node>>()
+
+        myGraph['A'] = listOf(Node(8, 'B'), Node(1, 'C'), Node(2, 'D'))
+        myGraph['B'] = emptyList()
+        myGraph['C'] = listOf(Node(5, 'B'), Node(2, 'D'))
+        myGraph['D'] = listOf(Node(3, 'E'), Node(5, 'F'))
+        myGraph['E'] = listOf(Node(1, 'F'))
+        myGraph['F'] = listOf(Node(5, 'A'))
+
+    }
+
+    @RequiresApi(Build.VERSION_CODES.N)
+    fun doDijkstra(myGraph: HashMap<Char, List<Node>>, start: Node): HashMap<Char, Int> {
+        val distances = HashMap<Char, Int>()
+
+        // 최초 거리저장 배열 세팅
+        for (indices in myGraph) {
+            distances[indices.key] = 99999999
+        }
+
+        distances[start.name] = 0
+
+        distances.forEach {
+            println(it)
+        }
+
+        // 우선순위 큐 설정
+        val priorityQueue = PriorityQueue<Node>(CustomComparator)
+
+        priorityQueue.offer(start)
+
+        while (priorityQueue.isNotEmpty()) {
+            val currentItem = priorityQueue.poll()!!
+            var distance = 0
+
+            if (distances[currentItem.name]!! < currentItem.distance) continue
+
+            for (graphItem in myGraph[currentItem.name]!!) {
+                distance = currentItem.distance + graphItem.distance
+
+                println("current : ${graphItem} | distance : $distance | current item distance : ${distances[currentItem.name]}")
+
+                if (distance < distances[graphItem.name]!!) {
+                    distances[graphItem.name] = distance
+
+                    println("after loop ")
+                    println()
+
+                    distances.forEach {
+                        println(it)
+                    }
+
+                    priorityQueue.offer(Node(distance, graphItem.name))
+                    println("offering : ${Node(distance, graphItem.name)}")
+                    println()
+                    priorityQueue.forEach {
+                        println(it)
+                    }
+                }
+            }
+        }
+
+        return distances
+    }
+
+    data class Node(val distance: Int, val name: Char)
 
     class CustomComparator {
         companion object : Comparator<Node> {
             override fun compare(o1: Node, o2: Node): Int =
                 when {
-                    o1.index != o2.index -> o1.index - o2.index
+                    o1.distance != o2.distance -> o1.distance - o2.distance
                     else -> 0
                 }
         }
