@@ -1,5 +1,6 @@
 package com.example.algorithmstudy
 
+import com.example.algorithmstudy.java.GreedyJava
 import org.junit.Test
 
 class GreedyTest {
@@ -15,5 +16,10 @@ class GreedyTest {
             .forEach {
                 println(it)
             }
+    }
+
+    @Test
+    fun boatTest() {
+        println(GreedyJava().solution(intArrayOf(70,80,50), 100))
     }
 }
