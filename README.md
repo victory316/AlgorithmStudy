@@ -7,3 +7,6 @@
 - BFS
 - DFS
 - Collection
+- Insertion sort
+- Selection sort
+- Bubble sort 
