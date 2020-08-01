@@ -71,42 +71,22 @@ class Dijkstra {
 
         distances[start.name] = 0
 
-        distances.forEach {
-            println(it)
-        }
-
         // 우선순위 큐 설정
         val priorityQueue = PriorityQueue<Node>(CustomComparator)
-
         priorityQueue.offer(start)
 
         while (priorityQueue.isNotEmpty()) {
             val currentItem = priorityQueue.poll()!!
-            var distance = 0
+            var distance: Int
 
             if (distances[currentItem.name]!! < currentItem.distance) continue
 
             for (graphItem in myGraph[currentItem.name]!!) {
                 distance = currentItem.distance + graphItem.distance
 
-                println("current : ${graphItem} | distance : $distance | current item distance : ${distances[currentItem.name]}")
-
                 if (distance < distances[graphItem.name]!!) {
                     distances[graphItem.name] = distance
-
-                    println("after loop ")
-                    println()
-
-                    distances.forEach {
-                        println(it)
-                    }
-
                     priorityQueue.offer(Node(distance, graphItem.name))
-                    println("offering : ${Node(distance, graphItem.name)}")
-                    println()
-                    priorityQueue.forEach {
-                        println(it)
-                    }
                 }
             }
         }

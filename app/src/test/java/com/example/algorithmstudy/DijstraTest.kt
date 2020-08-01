@@ -16,6 +16,7 @@ class DijstraTest {
         myGraph['E'] = listOf(Dijkstra.Node(1, 'F'))
         myGraph['F'] = listOf(Dijkstra.Node(5, 'A'))
 
+
         Dijkstra().doDijkstra(myGraph, Dijkstra.Node(0, 'A')).forEach {
             println(it)
         }
