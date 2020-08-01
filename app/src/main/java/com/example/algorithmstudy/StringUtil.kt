@@ -151,7 +151,7 @@ class StringUtil {
         }
     }
 
-    fun solution(s: String): String {
+    fun smallAndBig(s: String): String {
         val charArray = s.split(' ')
         val answerBuffer = StringBuffer()
         var biggest = -999999999
@@ -170,4 +170,57 @@ class StringUtil {
         answerBuffer.append("$smallest $biggest")
         return answerBuffer.toString()
     }
+
+    // TODO Not yet solved!
+    fun solution(s: String): String {
+        val charArray = s.split(' ')
+        val answerBuffer = StringBuffer()
+
+        charArray.forEach { word ->
+
+            if (word.isNotEmpty()) {
+                if (word[0].isLetter()) {
+                    word.toLowerCase().apply {
+                        answerBuffer.append(this[0].toUpperCase())
+                    }
+
+                    answerBuffer.append("${word.toLowerCase().substring(1)} ")
+                } else {
+                    answerBuffer.append("${word.toLowerCase()} ")
+                }
+            }
+
+        }
+
+        answerBuffer.deleteCharAt(answerBuffer.length - 1)
+
+        return answerBuffer.toString()
+    }
+
+    fun cutAndArrange(target : String, length: Int): String {
+        var remainingString = target
+        val resultBuffer = StringBuffer()
+
+        while (remainingString.isNotBlank()) {
+            if (target.length < length) {
+                return target
+            } else {
+                resultBuffer.append(remainingString.substring(0, length))
+                resultBuffer.append("\n")
+                remainingString = remainingString.substring(length, remainingString.length)
+            }
+
+            println("remain : $remainingString")
+        }
+
+        return resultBuffer.toString()
+    }
+
+    fun testFuction() {
+        val intArray = intArrayOf(7,3,2,9,4)
+        val sortArray = ArrayList<Int>()
+
+        intArray.toCollection(sortArray)
+    }
+
 }

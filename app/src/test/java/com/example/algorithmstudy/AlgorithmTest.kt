@@ -89,4 +89,34 @@ class AlgorithmTest {
     fun checkSumBetweenNumber() {
         println(StringUtil().sumBetweenNumber(3,15))
     }
+
+    @Test
+    fun checkString() {
+//        println(StringUtil().solution("3people unFollowed me"))
+//        println(StringUtil().solution("3"))
+//        println(StringUtil().solution("1a"))
+//        println(StringUtil().solution("a"))
+//        println(StringUtil().solution("A kdnkEen 3333FonernE EEoeno"))
+        println(StringUtil().solution("      1i anti ELNflkoif EnKei"))
+        println(StringUtil().solution("3People and thRee pEoPlE"))
+
+
+    }
+
+    @Test
+    fun truckTest() {
+        println("result : ${StackSolution().solution(2 ,10, intArrayOf(7,4,5,6))}")
+//        println("result : ${StackSolution().solution(100 ,100, intArrayOf(10))}")
+    }
+
+    @Test
+    fun cutAndArrangeTest() {
+        println(StringUtil().cutAndArrange("aaa bbbbbb cccdd", 4))
+        println(StringUtil().cutAndArrange("X", 4))
+    }
+
+    @Test
+    fun fibonacciTest() {
+        CalculatorUtil().divideFibonacci(3)
+    }
 }
