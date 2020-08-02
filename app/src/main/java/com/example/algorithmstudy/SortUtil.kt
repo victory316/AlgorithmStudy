@@ -67,4 +67,35 @@ class SortUtil {
 
         return arr
     }
+
+    fun solution(array: IntArray, commands: Array<IntArray>): IntArray {
+        var answer = ArrayList<Int>()
+        val listToHandle = array.toList()
+
+        listToHandle.forEach {
+            print(it)
+        }
+
+        commands.forEach {
+            it.forEach {
+                print(it)
+            }
+            println()
+        }
+
+        commands.forEach {
+            answer.add(listToHandle.subList(it[0] - 1, it[1]).sorted()[it[2] - 1])
+        }
+
+        return answer.toIntArray()
+    }
+
+    fun findBigInt(numbers: IntArray): String {
+        numbers.sortedBy { number -> number / 10 }
+        numbers.forEach {
+            println(it)
+        }
+        var answer = ""
+        return answer
+    }
 }
