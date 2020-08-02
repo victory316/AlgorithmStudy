@@ -22,4 +22,59 @@ class SearchUtil {
 
 
     }
+
+    fun solution(answers: IntArray): IntArray {
+
+        val studentArray = ArrayList<IntArray>()
+
+        studentArray.add(intArrayOf(1,2,3,4,5))
+        studentArray.add(intArrayOf(2, 1, 2, 3, 2, 4, 2, 5))
+        studentArray.add(intArrayOf(3, 3, 1, 1, 2, 2, 4, 4, 5, 5))
+
+        var correctCount: Int
+        var answerIndex = 0
+        var answerMap = HashMap<Int, Int>()
+
+        // 학생들의 답안을 차례로 검사
+        for (studentIndex in studentArray.indices) {
+            correctCount = 0
+            answerIndex = 0
+
+            for (index in answers.indices) {
+
+                if (answers[index] == studentArray[studentIndex][answerIndex]) {
+                    correctCount++
+                }
+
+                answerIndex++
+
+                if (answerIndex == studentArray[studentIndex].size ) {
+                    answerIndex = 0
+                }
+            }
+
+            answerMap[studentIndex] = correctCount
+        }
+
+//        answerMap.forEach {
+//            println(it)
+//        }
+
+        val topCorrect = answerMap.maxBy { data -> data.value }!!.value
+        val answer = ArrayList<Int>()
+
+        for (answers in answerMap) {
+            if (answers.value == topCorrect) {
+                answer.add(answers.key + 1)
+            }
+        }
+
+        answer.sort()
+//
+//        answer.forEach {
+//            println(it)
+//        }
+
+        return answer.toIntArray()
+    }
 }
