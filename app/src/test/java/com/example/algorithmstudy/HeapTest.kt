@@ -24,6 +24,14 @@ class HeapTest {
             this.getHeap().forEach {
                 println(it)
             }
+
+            println("popping " + this.pop())
+
+            println()
+
+            this.getHeap().forEach {
+                println(it)
+            }
         }
     }
 }
