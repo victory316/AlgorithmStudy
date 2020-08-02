@@ -67,7 +67,7 @@ class SortUtil {
         return arr
     }
 
-    fun doQuickSort(data: ArrayList<Int>) : ArrayList<Int>{
+    fun doQuickSort(data: ArrayList<Int>): ArrayList<Int> {
         if (data.size <= 1) return data
 
         val leftList = ArrayList<Int>()
@@ -91,6 +91,56 @@ class SortUtil {
 
 
         return resultList
+    }
+
+//    fun doMergeSort(data: ArrayList<Int>): ArrayList<Int> {
+//        if (data.size <= 1) return data
+//
+//        val medium = data.size / 2
+//
+//        val leftList = mergeSplit(data.subList(0, medium - 1))
+//        val rightList = mergeSplit(data.subList(0, medium))
+//
+//    }
+
+    fun mergeSplit(data: MutableList<Int>): MutableList<Int> {
+
+        if (data.size <= 1) return data
+
+        val medium = data.size / 2
+
+        val leftList = mergeSplit(data.subList(0, medium))
+        val rightList = mergeSplit(data.subList(medium, data.size))
+
+        return merge(leftList, rightList)
+    }
+
+    fun merge(left: MutableList<Int>, right: MutableList<Int>): MutableList<Int> {
+        val mergedList = ArrayList<Int>()
+        var leftPoint = 0
+        var rightPoint = 0
+
+        while (left.size > leftPoint && right.size > rightPoint) {
+            if (left[leftPoint] > right[rightPoint]) {
+                mergedList.add(right[rightPoint])
+                rightPoint++
+            } else {
+                mergedList.add(left[leftPoint])
+                leftPoint++
+            }
+        }
+
+        while (left.size > leftPoint) {
+            mergedList.add(left[leftPoint])
+            leftPoint++
+        }
+
+        while (right.size > rightPoint) {
+            mergedList.add(right[rightPoint])
+            rightPoint++
+        }
+
+        return mergedList
     }
 
     fun findK(array: IntArray, commands: Array<IntArray>): IntArray {
