@@ -10,3 +10,5 @@
 - Insertion sort
 - Selection sort
 - Bubble sort 
+- Heap
+- Dijkstra
