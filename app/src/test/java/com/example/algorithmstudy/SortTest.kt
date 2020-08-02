@@ -38,8 +38,16 @@ class SortTest {
     }
 
     @Test
+    fun quickSortTest() {
+
+        SortUtil().doQuickSort(arrayListOf(1,3,5)).forEach {
+            print("$it ")
+        }
+    }
+
+    @Test
     fun findK() {
-        SortUtil().solution(intArrayOf(1,5,2,6,3,7,4), arrayOf(intArrayOf(2,5,3), intArrayOf(4,4,1), intArrayOf(1,7,3)))
+        SortUtil().findK(intArrayOf(1,5,2,6,3,7,4), arrayOf(intArrayOf(2,5,3), intArrayOf(4,4,1), intArrayOf(1,7,3)))
     }
 
     @Test

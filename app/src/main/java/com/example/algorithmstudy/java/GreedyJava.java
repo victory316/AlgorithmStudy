@@ -19,13 +19,18 @@ public class GreedyJava {
 
         for (int i = 0; i < peopleList.size(); i++) {
 
-            if (boatCapacity + peopleList.get(i) < limit) {
+            if (boatCapacity + peopleList.get(i) <= limit) {
                 boatCapacity += peopleList.get(i);
             } else {
                 answer++;
                 boatCapacity = 0;
+                boatCapacity += peopleList.get(i);
             }
+
+//            System.out.println("boat capacity : " + boatCapacity + " | people : " + peopleList.get(i));
         }
+
+//        if (boatCapacity != 0) answer++;
 
         return answer;
     }

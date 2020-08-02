@@ -16,8 +16,7 @@ class SortUtil {
                     tempInt = target[y]
 
                     // swap
-                    target[y] = target[x]
-                    target[x] = tempInt
+                    Collections.swap(target, y, x)
                 }
             }
         }
@@ -68,7 +67,33 @@ class SortUtil {
         return arr
     }
 
-    fun solution(array: IntArray, commands: Array<IntArray>): IntArray {
+    fun doQuickSort(data: ArrayList<Int>) : ArrayList<Int>{
+        if (data.size <= 1) return data
+
+        val leftList = ArrayList<Int>()
+        val rightList = ArrayList<Int>()
+
+        val pivot = data[0]
+
+        for (index in 1 until data.size) {
+
+            if (pivot > data[index]) {
+                leftList.add(data[index])
+            } else {
+                rightList.add(data[index])
+            }
+        }
+
+        val resultList = ArrayList<Int>()
+        resultList.addAll(doQuickSort(leftList))
+        resultList.add(pivot)
+        resultList.addAll(doQuickSort(rightList))
+
+
+        return resultList
+    }
+
+    fun findK(array: IntArray, commands: Array<IntArray>): IntArray {
         var answer = ArrayList<Int>()
         val listToHandle = array.toList()
 
@@ -96,6 +121,13 @@ class SortUtil {
             println(it)
         }
         var answer = ""
+        return answer
+    }
+
+    fun hIndex(citations: IntArray): Int {
+
+
+        var answer = 0
         return answer
     }
 }
