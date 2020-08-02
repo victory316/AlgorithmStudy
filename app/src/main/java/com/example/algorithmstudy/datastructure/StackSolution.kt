@@ -1,4 +1,4 @@
-package com.example.algorithmstudy
+package com.example.algorithmstudy.datastructure
 
 import java.util.*
 
@@ -44,7 +44,12 @@ class StackSolution {
             truckQueue.peek()?.let {
 
                 if (bridgeQueue.map { truck -> truck.truckWeight }.sum() + it <= weight) {
-                    bridgeQueue.offer(Truck(truckQueue.poll()!!, 0))
+                    bridgeQueue.offer(
+                        Truck(
+                            truckQueue.poll()!!,
+                            0
+                        )
+                    )
                 }
             }
 

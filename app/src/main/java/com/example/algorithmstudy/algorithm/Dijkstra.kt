@@ -1,10 +1,9 @@
-package com.example.algorithmstudy
+package com.example.algorithmstudy.algorithm
 
 import android.os.Build
 import androidx.annotation.RequiresApi
 import java.util.*
 import kotlin.Comparator
-import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 
 class Dijkstra {
@@ -31,12 +30,34 @@ class Dijkstra {
 
     @RequiresApi(Build.VERSION_CODES.N)
     fun testMinHeap() {
-        val testMinQueue = PriorityQueue<Node>(CustomComparator)
+        val testMinQueue = PriorityQueue<Node>(
+            CustomComparator
+        )
 
-        testMinQueue.add(Node(2, 'A'))
-        testMinQueue.add(Node(5, 'B'))
-        testMinQueue.add(Node(1, 'C'))
-        testMinQueue.add(Node(7, 'D'))
+        testMinQueue.add(
+            Node(
+                2,
+                'A'
+            )
+        )
+        testMinQueue.add(
+            Node(
+                5,
+                'B'
+            )
+        )
+        testMinQueue.add(
+            Node(
+                1,
+                'C'
+            )
+        )
+        testMinQueue.add(
+            Node(
+                7,
+                'D'
+            )
+        )
 
         testMinQueue.forEach {
             println(it)
@@ -51,12 +72,39 @@ class Dijkstra {
     fun setDijkstraGraph() {
         val myGraph = HashMap<Char, List<Node>>()
 
-        myGraph['A'] = listOf(Node(8, 'B'), Node(1, 'C'), Node(2, 'D'))
+        myGraph['A'] = listOf(
+            Node(
+                8,
+                'B'
+            ),
+            Node(1, 'C'),
+            Node(2, 'D')
+        )
         myGraph['B'] = emptyList()
-        myGraph['C'] = listOf(Node(5, 'B'), Node(2, 'D'))
-        myGraph['D'] = listOf(Node(3, 'E'), Node(5, 'F'))
-        myGraph['E'] = listOf(Node(1, 'F'))
-        myGraph['F'] = listOf(Node(5, 'A'))
+        myGraph['C'] = listOf(
+            Node(
+                5,
+                'B'
+            ), Node(2, 'D')
+        )
+        myGraph['D'] = listOf(
+            Node(
+                3,
+                'E'
+            ), Node(5, 'F')
+        )
+        myGraph['E'] = listOf(
+            Node(
+                1,
+                'F'
+            )
+        )
+        myGraph['F'] = listOf(
+            Node(
+                5,
+                'A'
+            )
+        )
 
     }
 
@@ -72,7 +120,9 @@ class Dijkstra {
         distances[start.name] = 0
 
         // 우선순위 큐 설정
-        val priorityQueue = PriorityQueue<Node>(CustomComparator)
+        val priorityQueue = PriorityQueue<Node>(
+            CustomComparator
+        )
         priorityQueue.offer(start)
 
         while (priorityQueue.isNotEmpty()) {
@@ -86,7 +136,12 @@ class Dijkstra {
 
                 if (distance < distances[graphItem.name]!!) {
                     distances[graphItem.name] = distance
-                    priorityQueue.offer(Node(distance, graphItem.name))
+                    priorityQueue.offer(
+                        Node(
+                            distance,
+                            graphItem.name
+                        )
+                    )
                 }
             }
         }

@@ -1,5 +1,8 @@
 package com.example.algorithmstudy
 
+import com.example.algorithmstudy.algorithm.BFS
+import com.example.algorithmstudy.algorithm.DFS
+import com.example.algorithmstudy.datastructure.StackSolution
 import org.junit.Test
 
 /**
@@ -105,7 +108,8 @@ class AlgorithmTest {
 
     @Test
     fun truckTest() {
-        println("result : ${StackSolution().solution(2 ,10, intArrayOf(7,4,5,6))}")
+        println("result : ${StackSolution()
+            .solution(2 ,10, intArrayOf(7,4,5,6))}")
 //        println("result : ${StackSolution().solution(100 ,100, intArrayOf(10))}")
     }
 

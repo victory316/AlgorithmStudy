@@ -1,5 +1,6 @@
 package com.example.algorithmstudy
 
+import com.example.algorithmstudy.algorithm.Dijkstra
 import org.junit.Test
 
 class DijstraTest {
@@ -17,7 +18,8 @@ class DijstraTest {
         myGraph['F'] = listOf(Dijkstra.Node(5, 'A'))
 
 
-        Dijkstra().doDijkstra(myGraph, Dijkstra.Node(0, 'A')).forEach {
+        Dijkstra()
+            .doDijkstra(myGraph, Dijkstra.Node(0, 'A')).forEach {
             println(it)
         }
     }
