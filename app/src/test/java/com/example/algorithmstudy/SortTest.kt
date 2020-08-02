@@ -20,13 +20,13 @@ class SortTest {
     @Test
     fun insertionSortTest() {
 
-        SortUtil().doInsertionSort(intArrayOf(2,8,5,3,9,4,1)).forEach {
+        SortUtil().doInsertionSort(arrayListOf(2,8,5,3,9,4,1)).forEach {
             print("[$it]")
         }
 
         println()
 
-        SortUtil().doInsertionSort(intArrayOf(9, 4, 3, 104, 1, 2)).forEach {
+        SortUtil().doInsertionSort(arrayListOf(9, 4, 3, 104, 1, 2)).forEach {
             print("[$it]")
         }
 
@@ -40,14 +40,14 @@ class SortTest {
     @Test
     fun quickSortTest() {
 
-        SortUtil().doQuickSort(arrayListOf(1,3,5)).forEach {
+        SortUtil().doQuickSort(arrayListOf(9,22,1,3,5)).forEach {
             print("$it ")
         }
     }
 
     @Test
     fun mergeSortTest() {
-        SortUtil().mergeSplit(arrayListOf(1,5,4,9,10,3)).forEach {
+        SortUtil().doMergeSort(arrayListOf(1,5,4,9,10,3)).forEach {
             print(("$it "))
         }
     }

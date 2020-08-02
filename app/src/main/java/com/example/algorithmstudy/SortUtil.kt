@@ -1,9 +1,13 @@
 package com.example.algorithmstudy
 
 import java.util.*
+import kotlin.collections.ArrayList
 
 class SortUtil {
 
+    /**
+     * https://www.youtube.com/watch?v=g-PGLbMth_g
+     */
     // 시간복잡도 O(n^2)
     // 공간복잡도 O(n)
     fun doSelectionSort(target: ArrayList<Int>): ArrayList<Int> {
@@ -23,28 +27,18 @@ class SortUtil {
 
         return target
     }
-
-    /**
-     * https://www.youtube.com/watch?v=g-PGLbMth_g
-     */
     // 시간복잡도 O(n^2)
     // 공간복잡도 O(n)
-    fun doInsertionSort(arr: IntArray): IntArray {
-        var currentMinimum: Int
-        var tempInt: Int
+    fun doInsertionSort(arr: ArrayList<Int>): ArrayList<Int> {
+        var compareIndex : Int
 
         for (x in arr.indices) {
-            currentMinimum = x
+            compareIndex = x
 
-            for (y in x + 1 until arr.size) {
-                if (arr[currentMinimum] > arr[y]) {
-                    currentMinimum = y
-                }
+            while (compareIndex > 0 && arr[compareIndex - 1] > arr[compareIndex]) {
+                Collections.swap(arr, compareIndex - 1, compareIndex)
+                compareIndex--
             }
-
-            tempInt = arr[x]
-            arr[x] = arr[currentMinimum]
-            arr[currentMinimum] = tempInt
         }
 
         return arr
@@ -56,10 +50,10 @@ class SortUtil {
         for (x in 1 until arr.size) {
 
             for (y in 0 until arr.size - 1) {
-                if (arr[x] < arr[y]) {
-                    tempInt = arr[x]
-                    arr[x] = arr[y]
-                    arr[y] = tempInt
+                if (arr[y] > arr[y + 1]) {
+                    tempInt = arr[y]
+                    arr[y] = arr[y + 1]
+                    arr[y + 1] = tempInt
                 }
             }
         }
@@ -85,37 +79,27 @@ class SortUtil {
         }
 
         val resultList = ArrayList<Int>()
+
         resultList.addAll(doQuickSort(leftList))
         resultList.add(pivot)
         resultList.addAll(doQuickSort(rightList))
 
-
         return resultList
     }
 
-//    fun doMergeSort(data: ArrayList<Int>): ArrayList<Int> {
-//        if (data.size <= 1) return data
-//
-//        val medium = data.size / 2
-//
-//        val leftList = mergeSplit(data.subList(0, medium - 1))
-//        val rightList = mergeSplit(data.subList(0, medium))
-//
-//    }
-
-    fun mergeSplit(data: MutableList<Int>): MutableList<Int> {
+    fun doMergeSort(data: MutableList<Int>): MutableList<Int> {
 
         if (data.size <= 1) return data
 
         val medium = data.size / 2
 
-        val leftList = mergeSplit(data.subList(0, medium))
-        val rightList = mergeSplit(data.subList(medium, data.size))
+        val leftList = doMergeSort(data.subList(0, medium))
+        val rightList = doMergeSort(data.subList(medium, data.size))
 
         return merge(leftList, rightList)
     }
 
-    fun merge(left: MutableList<Int>, right: MutableList<Int>): MutableList<Int> {
+    private fun merge(left: MutableList<Int>, right: MutableList<Int>): MutableList<Int> {
         val mergedList = ArrayList<Int>()
         var leftPoint = 0
         var rightPoint = 0
