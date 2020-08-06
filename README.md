@@ -1,8 +1,10 @@
 # Algorithm Study
 
-알고리즘 + 패턴 연습용 Repository
+알고리즘 및 자료구조 + 패턴 연습용 Repository
 
 ### Handling with
+
+Algorithm
 
 - BFS
 - DFS
@@ -12,3 +14,7 @@
 - Bubble sort 
 - Heap
 - Dijkstra
+
+Patterns
+
+- Builder
