@@ -1,6 +1,6 @@
 # Algorithm Study
 
-알고리즘 연습용 Repository
+알고리즘 + 패턴 연습용 Repository
 
 ### Handling with
 
