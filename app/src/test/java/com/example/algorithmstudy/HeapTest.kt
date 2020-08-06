@@ -1,6 +1,7 @@
 package com.example.algorithmstudy
 
 import com.example.algorithmstudy.java.PriorityQueueUtil
+import com.example.algorithmstudy.kotlin.HeapUtil
 import org.junit.Test
 
 class HeapTest {

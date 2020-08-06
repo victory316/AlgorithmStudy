@@ -1,4 +1,4 @@
-package com.example.algorithmstudy
+package com.example.algorithmstudy.kotlin
 
 class MinDivider {
 
