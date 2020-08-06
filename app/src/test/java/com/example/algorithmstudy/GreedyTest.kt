@@ -2,6 +2,7 @@ package com.example.algorithmstudy
 
 import com.example.algorithmstudy.algorithm.Greedy
 import com.example.algorithmstudy.java.GreedyJava
+import com.example.algorithmstudy.kotlin.GreedyUtil
 import org.junit.Test
 
 class GreedyTest {
@@ -38,6 +39,8 @@ class GreedyTest {
 
     @Test
     fun bigNumber() {
-        println(GreedyUtil().solution("4177252841", 3))
+        println(
+            GreedyUtil()
+                .solution("4177252841", 3))
     }
 }

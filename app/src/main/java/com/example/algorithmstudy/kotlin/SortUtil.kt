@@ -1,4 +1,4 @@
-package com.example.algorithmstudy
+package com.example.algorithmstudy.kotlin
 
 import java.util.*
 import kotlin.collections.ArrayList
@@ -11,13 +11,13 @@ class SortUtil {
     // 시간복잡도 O(n^2)
     // 공간복잡도 O(n)
     fun doSelectionSort(target: ArrayList<Int>): ArrayList<Int> {
-        var tempInt: Int
+        var currentMinimum: Int
         for (x in target.indices) {
-            tempInt = target[x]
+            currentMinimum = target[x]
 
             for (y in x + 1 until target.size) {
-                if (target[y] < tempInt) {
-                    tempInt = target[y]
+                if (target[y] < currentMinimum) {
+                    currentMinimum = target[y]
 
                     // swap
                     Collections.swap(target, y, x)
@@ -27,6 +27,7 @@ class SortUtil {
 
         return target
     }
+
     // 시간복잡도 O(n^2)
     // 공간복잡도 O(n)
     fun doInsertionSort(arr: ArrayList<Int>): ArrayList<Int> {

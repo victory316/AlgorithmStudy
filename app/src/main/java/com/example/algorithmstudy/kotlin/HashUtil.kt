@@ -1,4 +1,4 @@
-package com.example.algorithmstudy
+package com.example.algorithmstudy.kotlin
 
 import java.util.*
 import kotlin.collections.ArrayList

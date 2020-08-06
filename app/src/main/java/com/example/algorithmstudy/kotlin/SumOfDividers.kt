@@ -1,4 +1,4 @@
-package com.example.algorithmstudy
+package com.example.algorithmstudy.kotlin
 
 /**
  *  Collection을 다루는 기초적인 Solution

@@ -1,8 +1,9 @@
-package com.example.algorithmstudy
+package com.example.algorithmstudy.kotlin
 
 import android.os.Build
 import android.util.ArraySet
 import androidx.annotation.RequiresApi
+import kotlin.math.abs
 
 class SearchUtil {
 
@@ -20,14 +21,13 @@ class SearchUtil {
         val tokenized = numbers.toCharArray()
 
 
-
     }
 
     fun solution(answers: IntArray): IntArray {
 
         val studentArray = ArrayList<IntArray>()
 
-        studentArray.add(intArrayOf(1,2,3,4,5))
+        studentArray.add(intArrayOf(1, 2, 3, 4, 5))
         studentArray.add(intArrayOf(2, 1, 2, 3, 2, 4, 2, 5))
         studentArray.add(intArrayOf(3, 3, 1, 1, 2, 2, 4, 4, 5, 5))
 
@@ -48,7 +48,7 @@ class SearchUtil {
 
                 answerIndex++
 
-                if (answerIndex == studentArray[studentIndex].size ) {
+                if (answerIndex == studentArray[studentIndex].size) {
                     answerIndex = 0
                 }
             }
@@ -70,11 +70,37 @@ class SearchUtil {
         }
 
         answer.sort()
-//
-//        answer.forEach {
-//            println(it)
-//        }
 
         return answer.toIntArray()
+    }
+
+    fun doCarpet(brown: Int, yellow: Int): IntArray {
+        val target = brown + yellow
+
+        // width가 항상 크고 첫 index에 들어가야 함.
+        var maxWidth = 0
+        var maxHeight = 0
+        var minDifference = 99999999
+
+        println(target)
+
+        for (divider in 1..target) {
+            if (target % divider == 0) {
+
+
+                if (maxWidth - target / divider > 0) {
+
+                    if (minDifference > maxWidth - target / divider) {
+                        minDifference = abs(maxWidth - target / divider)
+
+                        maxWidth = divider
+                        maxHeight = target / divider
+                    }
+                }
+
+            }
+        }
+
+        return intArrayOf(maxWidth, maxHeight)
     }
 }

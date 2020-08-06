@@ -1,5 +1,6 @@
 package com.example.algorithmstudy
 
+import com.example.algorithmstudy.kotlin.HashUtil
 import org.junit.Test
 
 class HashTest {
