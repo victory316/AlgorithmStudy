@@ -50,4 +50,21 @@ class SortUtil {
 
         return arr
     }
+
+    fun doBubbleSort(arr: IntArray): IntArray {
+        var tempInt: Int
+
+        for (x in 1 until arr.size) {
+
+            for (y in 0 until arr.size - 1) {
+                if (arr[x] < arr[y]) {
+                    tempInt = arr[x]
+                    arr[x] = arr[y]
+                    arr[y] = tempInt
+                }
+            }
+        }
+
+        return arr
+    }
 }

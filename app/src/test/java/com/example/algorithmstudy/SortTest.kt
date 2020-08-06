@@ -29,5 +29,11 @@ class SortTest {
         SortUtil().doInsertionSort(intArrayOf(9, 4, 3, 104, 1, 2)).forEach {
             print("[$it]")
         }
+
+        println()
+
+        SortUtil().doBubbleSort(intArrayOf(9, 4, 3, 104, 1, 2)).forEach {
+            print("[$it]")
+        }
     }
 }
