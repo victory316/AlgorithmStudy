@@ -37,6 +37,11 @@ class SortTest {
 
         println()
 
+<<<<<<< HEAD
+        SortUtil().doBubbleSort(intArrayOf(9, 4, 3, 104, 1, 2)).forEach {
+            print("[$it]")
+        }
+=======
         SortUtil()
             .doBubbleSort(intArrayOf(9, 4, 3, 104, 1, 2)).forEach {
             print("[$it]")
@@ -70,5 +75,6 @@ class SortTest {
     fun findInt() {
         SortUtil()
             .findBigInt(intArrayOf(6, 10 ,2))
+>>>>>>> f1fd7ca0bbd56f9bfe1aba468d0722f805e61396
     }
 }
