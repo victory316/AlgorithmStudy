@@ -1,4 +1,4 @@
-package com.example.algorithmstudy
+package com.example.algorithmstudy.datastructure
 
 import java.util.*
 
@@ -30,9 +30,6 @@ class StackSolution {
 
         while (truckQueue.isNotEmpty() || bridgeQueue.isNotEmpty()) {
 
-            println("count : $answer")
-
-
             if (bridgeQueue.size != 0) {
 
                 bridgeQueue.forEach {
@@ -40,35 +37,24 @@ class StackSolution {
                 }
 
                 if (bridgeQueue.peek()?.progress == bridge_length) {
-                    println("polling : ${bridgeQueue.poll()}")
+                    bridgeQueue.poll()
                 }
             }
 
             truckQueue.peek()?.let {
 
-                println("estimated : ${bridgeQueue.map { truck -> truck.truckWeight }.sum() + truckQueue.peek()}")
-
                 if (bridgeQueue.map { truck -> truck.truckWeight }.sum() + it <= weight) {
-                    println("adding")
-                    bridgeQueue.offer(Truck(truckQueue.poll()!!, 0))
+                    bridgeQueue.offer(
+                        Truck(
+                            truckQueue.poll()!!,
+                            0
+                        )
+                    )
                 }
             }
 
-//            println("count : $answer ")
-            println("current truck queue")
-            truckQueue.forEach {
-                println("$it")
-            }
-
-            println("current bridge queue")
-            bridgeQueue.forEach {
-                println("$it")
-            }
-            println()
-
             answer++
         }
-
 
         return answer
     }

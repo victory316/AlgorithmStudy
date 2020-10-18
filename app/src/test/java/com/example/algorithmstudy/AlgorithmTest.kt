@@ -1,5 +1,11 @@
 package com.example.algorithmstudy
 
+import com.example.algorithmstudy.algorithm.BFS
+import com.example.algorithmstudy.algorithm.DFS
+import com.example.algorithmstudy.datastructure.StackSolution
+import com.example.algorithmstudy.kotlin.CalculatorUtil
+import com.example.algorithmstudy.kotlin.StringUtil
+import com.example.algorithmstudy.kotlin.SumOfDividers
 import org.junit.Test
 
 /**
@@ -56,7 +62,8 @@ class AlgorithmTest {
 
     @Test
     fun CollectionTest() {
-        SumOfDividers().dropMinValue(intArrayOf(4,3,2,1)).forEach {
+        SumOfDividers()
+            .dropMinValue(intArrayOf(4,3,2,1)).forEach {
             print("$it ")
         }
     }
@@ -87,7 +94,8 @@ class AlgorithmTest {
 
     @Test
     fun checkSumBetweenNumber() {
-        println(StringUtil().sumBetweenNumber(3,15))
+        println(
+            StringUtil().sumBetweenNumber(3,15))
     }
 
     @Test
@@ -105,14 +113,18 @@ class AlgorithmTest {
 
     @Test
     fun truckTest() {
-        println("result : ${StackSolution().solution(2 ,10, intArrayOf(7,4,5,6))}")
+        println("result : ${StackSolution()
+            .solution(2 ,10, intArrayOf(7,4,5,6))}")
 //        println("result : ${StackSolution().solution(100 ,100, intArrayOf(10))}")
     }
 
     @Test
     fun cutAndArrangeTest() {
-        println(StringUtil().cutAndArrange("aaa bbbbbb cccdd", 4))
-        println(StringUtil().cutAndArrange("X", 4))
+        println(
+            StringUtil()
+                .cutAndArrange("aaa bbbbbb cccdd", 4))
+        println(
+            StringUtil().cutAndArrange("X", 4))
     }
 
     @Test

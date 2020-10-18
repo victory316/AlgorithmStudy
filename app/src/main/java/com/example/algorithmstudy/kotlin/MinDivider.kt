@@ -1,4 +1,4 @@
-package com.example.algorithmstudy
+package com.example.algorithmstudy.kotlin
 
 class MinDivider {
 
@@ -31,25 +31,6 @@ class MinDivider {
         } else {
             answer[0] = 1
         }
-
-//        while (true) {
-//
-//            // 최소공배수 판별
-//            if (big % small == 0) {
-//                answer[1] = m
-//
-//                break
-//            } else {
-//                answer[1] = big * small
-//            }
-//
-//            // 최대공약수 판별
-//            if (big % small == 0) {
-//                answer[0] = small
-//            } else {
-//                answer[0] = 1
-//            }
-//        }
 
         return answer
     }
