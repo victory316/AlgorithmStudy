@@ -1,6 +1,4 @@
-package com.example.algorithmstudy.pattern
-
-import kotlin.properties.Delegates
+package com.example.algorithmstudy.pattern.creation
 
 /**
  * Builder 패턴 (Creational pattern)
