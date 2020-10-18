@@ -21,4 +21,7 @@
 
 ### Patterns
 
+Creational
+- Factory
+- FactoryMethod
 - Builder
