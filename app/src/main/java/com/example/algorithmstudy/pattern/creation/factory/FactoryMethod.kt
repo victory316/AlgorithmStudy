@@ -1,5 +1,7 @@
 package com.example.algorithmstudy.pattern.creation
 
+import com.example.algorithmstudy.pattern.creation.factory.Product
+
 /**
  *  매개변수 팩토리 메소드 패턴
  *

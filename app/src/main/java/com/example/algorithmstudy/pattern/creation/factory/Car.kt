@@ -1,4 +1,4 @@
-package com.example.algorithmstudy.pattern.creation
+package com.example.algorithmstudy.pattern.creation.factory
 
 /**
  * Builder 패턴 (Creational pattern)

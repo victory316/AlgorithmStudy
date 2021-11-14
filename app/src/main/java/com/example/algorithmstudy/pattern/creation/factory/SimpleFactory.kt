@@ -1,4 +1,4 @@
-package com.example.algorithmstudy.pattern.creation
+package com.example.algorithmstudy.pattern.creation.factory
 
 /**
  *  가장 단순한 Factory 패턴
