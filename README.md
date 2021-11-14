@@ -25,3 +25,6 @@ Creational
 - Factory
 - FactoryMethod
 - Builder
+
+Structure
+- Adapter
