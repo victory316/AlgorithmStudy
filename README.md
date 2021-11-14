@@ -28,3 +28,4 @@ Creational
 
 Structure
 - Adapter
+- Facade
