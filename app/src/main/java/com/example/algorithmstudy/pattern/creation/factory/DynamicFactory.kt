@@ -1,4 +1,4 @@
-package com.example.algorithmstudy.pattern.creation
+package com.example.algorithmstudy.pattern.creation.factory
 
 /**
  *  동적 생성이 가능한 Factory로 newInstance의 파라미터에 따라 다른 객체를 생성해 반환.

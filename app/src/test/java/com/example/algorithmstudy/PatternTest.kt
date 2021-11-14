@@ -1,6 +1,6 @@
 package com.example.algorithmstudy
 
-import com.example.algorithmstudy.pattern.creation.Car
+import com.example.algorithmstudy.pattern.creation.factory.Car
 import org.junit.Test
 
 class PatternTest {
