@@ -1,6 +1,5 @@
-package com.example.algorithmstudy
+package com.example.algorithmstudy.algorithm
 
-import com.example.algorithmstudy.algorithm.Greedy
 import com.example.algorithmstudy.java.GreedyJava
 import com.example.algorithmstudy.kotlin.GreedyUtil
 import org.junit.Test

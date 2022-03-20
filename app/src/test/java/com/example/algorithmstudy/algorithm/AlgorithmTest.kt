@@ -1,7 +1,5 @@
-package com.example.algorithmstudy
+package com.example.algorithmstudy.algorithm
 
-import com.example.algorithmstudy.algorithm.BFS
-import com.example.algorithmstudy.algorithm.DFS
 import com.example.algorithmstudy.datastructure.StackSolution
 import com.example.algorithmstudy.kotlin.CalculatorUtil
 import com.example.algorithmstudy.kotlin.StringUtil
