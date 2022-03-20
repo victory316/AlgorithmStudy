@@ -1,4 +1,4 @@
-package com.example.algorithmstudy
+package com.example.algorithmstudy.algorithm
 
 import com.example.algorithmstudy.kotlin.SearchUtil
 import org.junit.Test

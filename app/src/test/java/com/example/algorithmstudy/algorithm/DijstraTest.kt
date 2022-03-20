@@ -1,6 +1,5 @@
-package com.example.algorithmstudy
+package com.example.algorithmstudy.algorithm
 
-import com.example.algorithmstudy.algorithm.Dijkstra
 import org.junit.Test
 
 class DijstraTest {
