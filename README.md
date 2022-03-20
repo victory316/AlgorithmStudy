@@ -23,8 +23,10 @@
 
 Creational
 - Factory
+- AbstractFactory
 - FactoryMethod
 - Builder
+- Prototype
 
 Structure
 - Adapter
