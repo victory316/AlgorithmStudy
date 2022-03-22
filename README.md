@@ -1,6 +1,7 @@
 # Algorithm Study
 
-알고리즘 및 자료구조 + 패턴 연습용 Repository
+- 알고리즘 및 자료구조 + 패턴 연습용 Repository
+- Most of algorithm and patterns are tested with test code.
 
 ## Handling with
 
