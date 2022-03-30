@@ -1,4 +1,6 @@
-package com.example.algorithmstudy.pattern.structure.adapter
+package com.example.algorithmstudy.pattern.structure.bridge
+
+import com.example.algorithmstudy.pattern.structure.bridge.BluetoothAdapter
 
 class SamsungSpeaker : BluetoothAdapter {
     override fun connect() {

@@ -1,4 +1,4 @@
-package com.example.algorithmstudy.pattern.structure.adapter
+package com.example.algorithmstudy.pattern.structure.bridge
 
 interface BluetoothAdapter {
     fun connect()
