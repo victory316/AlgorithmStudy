@@ -1,4 +1,4 @@
-package com.example.algorithmstudy.pattern.creation.abstract_factory
+package com.example.algorithmstudy.pattern.creation.abstractfactory
 
 class HQ {
     private val buildings = mutableListOf<Building<*, Unit>>()

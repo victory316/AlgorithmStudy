@@ -1,7 +1,7 @@
-package com.example.algorithmstudy.pattern.creation.abstract_factory
+package com.example.algorithmstudy.pattern.creation.abstractfactory
 
-import com.example.algorithmstudy.pattern.creation.abstract_factory.units.Rifleman
-import com.example.algorithmstudy.pattern.creation.abstract_factory.units.RocketSoldier
+import com.example.algorithmstudy.pattern.creation.abstractfactory.units.Rifleman
+import com.example.algorithmstudy.pattern.creation.abstractfactory.units.RocketSoldier
 
 
 class Barracks : Building<InfantryUnits, Unit> {
