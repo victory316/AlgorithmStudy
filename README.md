@@ -30,5 +30,7 @@ Creational
 - Prototype
 
 Structure
+- Decorator
+- Bridge
 - Adapter
 - Facade
