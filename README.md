@@ -34,3 +34,5 @@ Structure
 - Bridge
 - Adapter
 - Facade
+- Composite
+- Flyweight
