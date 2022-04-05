@@ -1,6 +1,6 @@
 package com.example.algorithmstudy.pattern.structure.proxy
 
-class VirtualProxyLoader : ProxyLoader {
+class VirtualProxyLoader : ProxyLoaderInterface {
     private val proxyData: ProxyData by lazy {
         ProxyData("PROXY DATA")
     }

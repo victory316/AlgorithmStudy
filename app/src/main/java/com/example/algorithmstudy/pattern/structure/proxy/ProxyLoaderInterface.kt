@@ -1,5 +1,5 @@
 package com.example.algorithmstudy.pattern.structure.proxy
 
-interface ProxyLoader {
+interface ProxyLoaderInterface {
     fun fetch(): ProxyData
 }
