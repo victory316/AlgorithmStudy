@@ -36,3 +36,4 @@ Structure
 - Facade
 - Composite
 - Flyweight
+- Proxy
