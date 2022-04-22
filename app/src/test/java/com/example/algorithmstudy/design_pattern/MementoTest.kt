@@ -40,7 +40,7 @@ class MementoTest {
         val careTaker = GenericCareTaker<Memento>()
         careTaker.addMemento(memento)
 
-        originator.state = Memento("Captaion America")
+        originator.state = Memento("Captain America")
         originator.state = Memento("Hulk")
         memento = originator.createMemento()
         careTaker.addMemento(memento)
@@ -55,5 +55,16 @@ class MementoTest {
         memento = careTaker.getMemento(0)
         originator.setMemento(memento)
         println("Originator Current State: " + originator.state!!)
+    }
+
+    @Test
+    fun testMananger() {
+        MementoManager.setState(Memento("Ironman"))
+        MementoManager.setState(Memento("Captain America"))
+        MementoManager.setState(Memento("Hulk"))
+
+        println(MementoManager.getState(2))
+        println(MementoManager.getState(1))
+        println(MementoManager.getState(0))
     }
 }
