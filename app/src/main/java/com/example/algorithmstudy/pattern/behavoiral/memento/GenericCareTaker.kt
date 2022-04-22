@@ -1,0 +1,16 @@
+package com.example.algorithmstudy.pattern.behavoiral.memento
+
+/**
+ *  기억하고자 하는 어느 클래스와도 사용 가능하도록 하는 GenericCareTaker
+ */
+class GenericCareTaker<T : Any> {
+    private val stateList = mutableListOf<T>()
+
+    fun addMemento(memento: T) {
+        stateList.add(memento)
+    }
+
+    fun getMemento(index: Int): T {
+        return stateList[index]
+    }
+}
