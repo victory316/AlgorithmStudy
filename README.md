@@ -37,3 +37,8 @@ Structure
 - Composite
 - Flyweight
 - Proxy
+
+Behavioral
+- Iterator
+- Memento
+- Strategy
