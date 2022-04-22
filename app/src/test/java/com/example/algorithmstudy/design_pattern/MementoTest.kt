@@ -1,7 +1,6 @@
 package com.example.algorithmstudy.design_pattern
 
-import com.example.algorithmstudy.pattern.behavoiral.memento.CareTaker
-import com.example.algorithmstudy.pattern.behavoiral.memento.Originator
+import com.example.algorithmstudy.pattern.behavoiral.memento.*
 import org.junit.Test
 
 /**
@@ -22,6 +21,31 @@ class MementoTest {
         memento = originator.createMemento()
         careTaker.addMemento(memento)
         originator.state = "Thor"
+        println("Originator Current State: " + originator.state!!)
+        println("Originator restoring to previous state...")
+        memento = careTaker.getMemento(1)
+        originator.setMemento(memento)
+        println("Originator Current State: " + originator.state!!)
+        println("Again restoring to previous state...")
+        memento = careTaker.getMemento(0)
+        originator.setMemento(memento)
+        println("Originator Current State: " + originator.state!!)
+    }
+
+    @Test
+    fun testGeneric() {
+        val originator = GenericOriginator<Memento>()
+        originator.state = Memento("Ironman")
+        var memento = originator.createMemento()
+        val careTaker = GenericCareTaker<Memento>()
+        careTaker.addMemento(memento)
+
+        originator.state = Memento("Captaion America")
+        originator.state = Memento("Hulk")
+        memento = originator.createMemento()
+        careTaker.addMemento(memento)
+        originator.state = Memento("Thor")
+
         println("Originator Current State: " + originator.state!!)
         println("Originator restoring to previous state...")
         memento = careTaker.getMemento(1)
