@@ -42,3 +42,6 @@ Behavioral
 - Iterator
 - Memento
 - Strategy
+- State
+- Command
+- Visitor
