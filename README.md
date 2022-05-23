@@ -1,9 +1,10 @@
 # Algorithm Study
 
-- 알고리즘 및 자료구조 + 패턴 연습용 Repository
+- The sandbox of algorithm and design patterns. 🛠
 - Most of algorithm and patterns are tested with test code.
-
-## Handling with
+- Algorithm Tests : [Link](https://github.com/victory316/AlgorithmStudy/tree/master/app/src/test/java/com/example/algorithmstudy/algorithm)
+- Design Pattern Tests : [Link](https://github.com/victory316/AlgorithmStudy/tree/master/app/src/test/java/com/example/algorithmstudy/design_pattern)
+## Available for now
 
 ### Algorithm
 
