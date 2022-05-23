@@ -4,9 +4,9 @@
 - Most of algorithm and patterns are tested with test code.
 - Algorithm Tests : [Link](https://github.com/victory316/AlgorithmStudy/tree/master/app/src/test/java/com/example/algorithmstudy/algorithm)
 - Design Pattern Tests : [Link](https://github.com/victory316/AlgorithmStudy/tree/master/app/src/test/java/com/example/algorithmstudy/design_pattern)
-## Available for now
+# Available for now
 
-### Algorithm
+## Algorithm
 
 - BFS
 - DFS
@@ -16,12 +16,7 @@
 - Heap
 - Dijkstra
 
-### Data Structure
-
-- Collection
-
-
-### Patterns
+## Patterns
 
 Creational
 - Factory
@@ -46,3 +41,7 @@ Behavioral
 - State
 - Command
 - Visitor
+
+## Data Structure
+
+- Collection
