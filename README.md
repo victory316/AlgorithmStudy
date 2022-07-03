@@ -41,6 +41,10 @@ Behavioral
 - State
 - Command
 - Visitor
+- Template Method
+- Chain of responsibility
+- Observer
+- Mediator
 
 ## Data Structure
 
