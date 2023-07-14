@@ -1,4 +1,4 @@
-package com.example.algorithmstudy.design_pattern
+package com.example.algorithmstudy.pattern
 
 import com.example.algorithmstudy.pattern.behavoiral.memento.*
 import org.junit.Test

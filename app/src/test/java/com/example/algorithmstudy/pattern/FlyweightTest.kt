@@ -1,6 +1,5 @@
-package com.example.algorithmstudy.design_pattern
+package com.example.algorithmstudy.pattern
 
-import com.example.algorithmstudy.pattern.creation.prototype.MyComputer
 import com.example.algorithmstudy.pattern.structure.flyweight.WeaponFactory
 import org.junit.Test
 

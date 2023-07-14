@@ -1,4 +1,4 @@
-package com.example.algorithmstudy.design_pattern
+package com.example.algorithmstudy.pattern
 
 import com.example.algorithmstudy.pattern.creation.prototype.MyComputer
 import org.junit.Test

@@ -1,4 +1,4 @@
-package com.example.algorithmstudy.design_pattern
+package com.example.algorithmstudy.pattern
 
 import com.example.algorithmstudy.pattern.structure.decorator.BubbleLights
 import com.example.algorithmstudy.pattern.structure.decorator.PineChristmasTree

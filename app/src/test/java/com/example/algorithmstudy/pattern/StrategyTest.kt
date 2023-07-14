@@ -1,4 +1,4 @@
-package com.example.algorithmstudy.design_pattern
+package com.example.algorithmstudy.pattern
 
 import com.example.algorithmstudy.pattern.behavoiral.strategy.Fireball
 import com.example.algorithmstudy.pattern.behavoiral.strategy.Player

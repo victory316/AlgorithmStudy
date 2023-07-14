@@ -1,10 +1,7 @@
-package com.example.algorithmstudy.design_pattern
+package com.example.algorithmstudy.pattern
 
 import com.example.algorithmstudy.pattern.behavoiral.iterator.Food
 import com.example.algorithmstudy.pattern.behavoiral.iterator.FoodIterator
-import com.example.algorithmstudy.pattern.behavoiral.strategy.Fireball
-import com.example.algorithmstudy.pattern.behavoiral.strategy.Player
-import com.example.algorithmstudy.pattern.behavoiral.strategy.ThunderStorm
 import org.junit.Test
 
 /**
