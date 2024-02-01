@@ -3,7 +3,7 @@
 - The sandbox of algorithm and design patterns. 🛠
 - Most of algorithm and patterns are tested with test code.
 - Algorithm Tests : [Link](https://github.com/victory316/AlgorithmStudy/tree/master/app/src/test/java/com/example/algorithmstudy/algorithm)
-- Design Pattern Tests : [Link](https://github.com/victory316/AlgorithmStudy/tree/master/app/src/test/java/com/example/algorithmstudy/design_pattern)
+- Design Pattern Tests : [Link](https://github.com/victory316/AlgorithmStudy/tree/master/app/src/test/java/com/example/algorithmstudy/design_pattern](https://github.com/victory316/AlgorithmStudy/tree/master/app/src/test/java/com/example/algorithmstudy/pattern))
 # Available for now
 
 ## Algorithm
