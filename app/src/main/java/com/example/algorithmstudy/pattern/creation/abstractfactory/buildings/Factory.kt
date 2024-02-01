@@ -1,17 +1,18 @@
 package com.example.algorithmstudy.pattern.creation.abstractfactory.buildings
 
 import com.example.algorithmstudy.pattern.creation.abstractfactory.Building
-import com.example.algorithmstudy.pattern.creation.abstractfactory.InfantryUnits
-import com.example.algorithmstudy.pattern.creation.abstractfactory.Unit
-import com.example.algorithmstudy.pattern.creation.abstractfactory.units.infantry.Rifleman
-import com.example.algorithmstudy.pattern.creation.abstractfactory.units.infantry.RocketSoldier
+import com.example.algorithmstudy.pattern.creation.abstractfactory.MechanicUnits
+import com.example.algorithmstudy.pattern.creation.abstractfactory.GameUnit
+import com.example.algorithmstudy.pattern.creation.abstractfactory.units.mechanics.SiegeTank
+import com.example.algorithmstudy.pattern.creation.abstractfactory.units.mechanics.Vulture
 
 
-class Factory : Building<InfantryUnits, Unit> {
-    override fun build(type: InfantryUnits): Unit {
+class Factory : Building<MechanicUnits, GameUnit> {
+
+    override fun build(type: MechanicUnits): GameUnit {
         return when (type) {
-            InfantryUnits.RIFLEMAN -> Rifleman()
-            InfantryUnits.ROCKET_SOLDIER -> RocketSoldier()
+            MechanicUnits.VULTURE -> Vulture()
+            MechanicUnits.SIEGE_TANK -> SiegeTank()
         }
     }
 }

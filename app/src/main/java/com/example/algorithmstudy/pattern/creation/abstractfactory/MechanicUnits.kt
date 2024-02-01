@@ -1,4 +1,6 @@
 package com.example.algorithmstudy.pattern.creation.abstractfactory
 
-interface Unit {
+enum class MechanicUnits {
+    VULTURE,
+    SIEGE_TANK
 }
