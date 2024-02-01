@@ -1,4 +1,4 @@
-package com.example.algorithmstudy.pattern.creation.abstractfactory.units
+package com.example.algorithmstudy.pattern.creation.abstractfactory.units.infantry
 
 import com.example.algorithmstudy.pattern.creation.abstractfactory.Infantry
 
