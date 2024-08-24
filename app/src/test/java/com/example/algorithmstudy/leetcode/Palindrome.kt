@@ -9,6 +9,7 @@ class Palindrome {
         original.forEachIndexed { a, b ->
             if (b != reverse[a] && isPalindrome) {
                 isPalindrome = false
+                return@forEachIndexed
             }
         }
 
