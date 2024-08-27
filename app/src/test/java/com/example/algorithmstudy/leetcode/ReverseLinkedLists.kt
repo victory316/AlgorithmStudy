@@ -1,5 +1,6 @@
 package com.example.algorithmstudy.leetcode
 
+import org.junit.Test
 import java.util.LinkedList
 import java.util.Stack
 
@@ -10,6 +11,7 @@ class ReverseLinkedLists {
     }
 
     fun reverseList(head: ListNode?): ListNode? {
+
         val nodeStack: Stack<Int> = Stack()
         var currentNode: ListNode? = head
 
@@ -17,17 +19,17 @@ class ReverseLinkedLists {
             nodeStack.push(currentNode?.`val`)
             currentNode = currentNode?.next
 
-            if (currentNode?.next != null) break
+            if (currentNode?.next == null) break
         }
 
         var newListNode: ListNode? = null
         var currentNewListPointer: ListNode? = null
 
         while (nodeStack.isNotEmpty()) {
-            if (currentNewListPointer == null) {
+            if (currentNewListPointer == null && nodeStack.peek() != null) {
                 newListNode = ListNode(nodeStack.pop())
                 currentNewListPointer = newListNode
-            } else {
+            } else if (nodeStack.peek() != null) {
                 ListNode(nodeStack.pop()).let {
                     currentNewListPointer?.next = it
                     currentNewListPointer = it
@@ -37,4 +39,22 @@ class ReverseLinkedLists {
 
         return newListNode
     }
+
+    @Test
+    fun TestReversedLinkedList() {
+        val testNode = ListNode(2).apply {
+            next = ListNode(1)
+        }
+
+        reverseList(testNode)
+    }
+
+
+    @Test
+    fun TestReversedLinkedListEmpty() {
+        val testNode = ListNode(2)
+
+        reverseList(testNode)
+    }
+
 }
