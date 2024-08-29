@@ -9,8 +9,8 @@ class ReverseLinkedLists {
     class ListNode(var `val`: Int) {
         var next: ListNode? = null
     }
-
     fun reverseList(head: ListNode?): ListNode? {
+        if (head == null) return null
 
         val nodeStack: Stack<Int> = Stack()
         var currentNode: ListNode? = head
@@ -19,7 +19,7 @@ class ReverseLinkedLists {
             nodeStack.push(currentNode?.`val`)
             currentNode = currentNode?.next
 
-            if (currentNode?.next == null) break
+            if (currentNode == null) break
         }
 
         var newListNode: ListNode? = null

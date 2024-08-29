@@ -1,4 +1,4 @@
-class Solution {
+class MaxVowels {
     fun maxVowels(s: String, k: Int): Int {
         var value = 0
         for(i in 0 until k){
