@@ -1,47 +1,25 @@
 package com.example.algorithmstudy.leetcode
 
 import org.junit.Test
+import java.util.Stack
 
 class RemoveStars {
-
     fun removeStars(s: String): String {
-        return removeWhileExists(s)
-    }
+        val starStack: Stack<Char> = Stack()
 
-    private tailrec fun removeWhileExists(target: String): String {
-        var targetTemp = target
-        var index = 0
-        var removed = false
-
-        while(!removed) {
-            if (target.toCharArray()[index] == '*') {
-                targetTemp = target.removeRange(index - 1, index + 1)
-                removed = true
-            }
-
-            index++
-        }
-
-        target.toCharArray().forEachIndexed { index, c ->
-            if (!removed) {
-                if (c == '*') {
-                    targetTemp = target.removeRange(index - 1, index + 1)
-                }
-                removed = true
+        s.forEach {
+            if (it == '*') {
+                starStack.pop()
             } else {
-                return@forEachIndexed
+                starStack.push(it)
             }
         }
 
-        return if (target.contains('*')) {
-            removeWhileExists(targetTemp)
-        } else {
-            target
-        }
+        return starStack.joinToString("")
     }
 
     @Test
     fun testRemoveStars() {
-        removeStars("leet**cod*e")
+        assert(removeStars("leet**cod*e") == "lecoe")
     }
 }
