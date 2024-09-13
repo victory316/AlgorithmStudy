@@ -42,7 +42,7 @@ class PosManager : PosInterface {
 
             currentOrderRequest = copy(
                 itemList = itemList.toMutableList().apply {
-
+                    removeAt(prevItemId)
                 }.toList()
             )
         }

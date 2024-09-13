@@ -6,13 +6,11 @@ sealed class ItemOption(
     data class Memo(
         val memoId: Int,
         val memos: String
-    ) : ItemOption(
-        id = memoId
-    )
+    ) : ItemOption(memoId)
 
     data class Quantity(
         val countableId: Int,
         val name: String,
         val quantity: Int
-    ) : ItemOption(id = countableId)
+    ) : ItemOption(countableId)
 }
