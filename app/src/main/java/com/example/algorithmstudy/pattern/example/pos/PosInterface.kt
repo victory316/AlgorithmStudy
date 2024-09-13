@@ -9,7 +9,7 @@ interface PosInterface {
 
     fun clearAllItems()
 
-    fun publishOrder(order: Order)
+    fun publishOrder(orderRequest: OrderRequest)
 
-    fun notifyOrderDone(orderId: Int)
+    fun notifyOrderDone(orderRequestId: Int)
 }
