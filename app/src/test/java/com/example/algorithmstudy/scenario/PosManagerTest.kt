@@ -15,4 +15,18 @@ class PosManagerTest {
 
         assert(manager.orderIdCount == 2)
     }
+
+    @Test
+    fun `clear all item clears item list in order request`() {
+        val item = Item.Default(itemId = 2, name = "Ice Americano")
+        val manager = PosManager()
+
+        manager.addItem(item)
+        manager.addItem(item)
+        manager.addItem(item)
+        manager.addItem(item)
+        manager.clearAllItems()
+
+        assert(manager.currentOrderRequest?.itemList?.isEmpty() == true)
+    }
 }
