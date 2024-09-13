@@ -1,10 +1,14 @@
 package com.example.algorithmstudy.pattern.example.pos
 
+import androidx.annotation.VisibleForTesting
+
 class PosManager : PosInterface {
 
-    private var orderIdCount: Int = 1
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    var orderIdCount: Int = 1
 
-    private var currentOrderRequest: OrderRequest? = null
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
+    var currentOrderRequest: OrderRequest? = null
 
     override fun addItem(item: Item) {
         if (currentOrderRequest == null) {
