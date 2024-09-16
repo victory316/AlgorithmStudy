@@ -136,6 +136,9 @@ class SortUtil {
             print(it)
         }
 
+        commands.size
+        commands.first()
+
         commands.forEach {
             it.forEach {
                 print(it)
